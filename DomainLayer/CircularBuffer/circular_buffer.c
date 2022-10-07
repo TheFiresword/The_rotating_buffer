@@ -16,7 +16,7 @@ struct circular_buffer
 circular_buffer circularBuffer_construct(unsigned long length)
 {
     INSTANTIATE(circular_buffer);
-    self->tail = self->head = self->current = malloc(length * sizeof(struct circular_buffer));
+    self->tail = self->head = self->current = malloc(length * sizeof(char));
 
     self->length = length;
     self->isFull = false;
